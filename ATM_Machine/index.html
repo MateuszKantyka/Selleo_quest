@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pierwsza strona</title>
+	<meta charset="utf-8">
+
+<script type="text/javascript" src="function.js">  </script>
+<script type="text/javascript" src="actors.js">  </script>
+</head>
+<body onload="refresh();" >
+
+<div style="display:block;" id="welcome">
+Witaj! Wprowadź PIN aby zalogować się do bankomatu.
+<input type="text" id="enterPIN"/>
+<button onclick="loggin()" id="enterPIN" type="button"/> Zatwierdź </button>
+</div>
+
+<div style="display:none;" id="menu">
+	Pokazanie stanu konta: <button onclick="showPersonCash()" id="personCashBtn" type="button">klik</button> <br>
+	Wybranie środków z konta: <button onclick="withdrawCash()" id="withdrawCashBtn" type="button">klik</button> <br>
+  Doładowanie konta w banku: <button onclick="fund()" id="fundBtn" type="button">klik</button> <br>
+	Wylogowanie: <button onclick="logout()" id="logoutBtn" type="button">klik</button> <br>
+</div>
+
+
+<br><h1>Tryb serwisowy: </h1>
+Stan portfela
+<div id="WalletCash"> </div> --------- <br> Stan konta:
+<div id="PersonCash"> </div> --------- <br> Pin:
+<div id="PersonPin"> </div>  --------- <br> Status karty:
+<div id="PersonStatus"> </div> -------- <br> Ilość pieniędzy w bankomacie:
+<div id="ATMCash"> </div> -------- <br>
+Odblokowanie karty przez bank: <button onclick="unlocking()" id="unlocking" type="button">klik</button> <br>
+Dodawanie pieniędzy do bankomatu: <input type="text" id="cashFromAtmOperator" >
+<button onclick="addingCash()" id="cashToAdd" type="button">Dodaj</button> <br>
+--------<br>
+Log file: <br>
+<textarea readonly id="logs" rows="17" cols="100" ></textarea>
+</body>
+</html>
